@@ -129,8 +129,8 @@ const Portfolio = () => {
       gradient: "from-blue-600 via-purple-600 to-indigo-600",
       icon: <Globe className="w-6 h-6" />,
       stats: { users: "10K+", transactions: "500+", uptime: "99.9%" },
-        github: "https://github.com/Mutombe/auto-eden",
-        link: "https://autoeden.co.zw",
+      github: "https://github.com/Mutombe/auto-eden",
+      link: "https://autoeden.co.zw",
       year: "2024",
     },
     {
@@ -163,7 +163,7 @@ const Portfolio = () => {
       icon: <Heart className="w-6 h-6" />,
       stats: { sessions: "1K+", satisfaction: "98%", countries: "3" },
       github: "https://github.com/Mutombe/risewithme",
-        link: "https://raphaela-psychotherapy.ca",
+      link: "https://raphaela-psychotherapy.ca",
       year: "2023",
     },
     {
@@ -175,8 +175,8 @@ const Portfolio = () => {
       gradient: "from-green-600 via-lime-600 to-emerald-600",
       icon: <Zap className="w-6 h-6" />,
       stats: { certificates: "50K+", co2saved: "100K tons", efficiency: "95%" },
-    github: "https://github.com/zim-rec",
-        link: "https://zim-rec.co.zw",
+      github: "https://github.com/zim-rec",
+      link: "https://zim-rec.co.zw",
       year: "2023",
     },
     {
@@ -188,8 +188,8 @@ const Portfolio = () => {
       gradient: "from-orange-600 via-amber-600 to-yellow-600",
       icon: <Award className="w-6 h-6" />,
       stats: { countries: "15+", revenue: "$20k+", growth: "200%" },
-        github: "https://github.com/Mutombe/ari",
-        link: "https://africarecs.com",
+      github: "https://github.com/Mutombe/ari",
+      link: "https://africarecs.com",
       year: "2023",
     },
   ];
@@ -283,8 +283,7 @@ const Portfolio = () => {
       content:
         "Simbarashe delivered an exceptional marketplace platform that exceeded our expectations. His attention to detail and technical expertise are remarkable.",
       rating: 5,
-      image:
-        "anold.jpeg",
+      image: "anold.jpeg",
     },
     {
       name: "L. Shonhiwa",
@@ -292,8 +291,7 @@ const Portfolio = () => {
       content:
         "The therapy platform Simbarashe built transformed my practice. The secure, user-friendly interface has improved patient engagement significantly.",
       rating: 5,
-      image:
-        "lilian3.jpeg",
+      image: "lilian3.jpeg",
     },
     {
       name: "Lionita Mhishi",
@@ -301,8 +299,7 @@ const Portfolio = () => {
       content:
         "Outstanding work on our real estate platform. The AI-powered features and intuitive design have boosted our client satisfaction to 98%.",
       rating: 5,
-      image:
-        "leo.jpeg",
+      image: "leo.jpeg",
     },
   ];
 
@@ -567,7 +564,8 @@ const Portfolio = () => {
                 Get In Touch
               </button>
 
-              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/25 hover:scale-105 flex items-center gap-2"
+              <button
+                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/25 hover:scale-105 flex items-center gap-2"
                 onClick={() => window.open("/Profile.pdf", "_blank")}
               >
                 <Download className="w-5 h-5" />
@@ -818,13 +816,17 @@ const Portfolio = () => {
                         View Live Demo
                         <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
-                      <button className="px-8 py-4 rounded-2xl bg-white/10 text-white font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105"
-                        onClick={() => window.open(project.github, "_blank")}>
+                      <button
+                        className="px-8 py-4 rounded-2xl bg-white/10 text-white font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105"
+                        onClick={() => window.open(project.github, "_blank")}
+                      >
                         <Github className="w-5 h-5" />
                         Source Code
                       </button>
-                      <button className="px-8 py-4 rounded-2xl border-2 border-white/20 text-white font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105"
-                        onClick={() => scrollToSection("testimonials")}>
+                      <button
+                        className="px-8 py-4 rounded-2xl border-2 border-white/20 text-white font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105"
+                        onClick={() => scrollToSection("testimonials")}
+                      >
                         <Award className="w-5 h-5" />
                         Case Study
                       </button>
@@ -1140,7 +1142,10 @@ const Portfolio = () => {
                   <Mail className="w-5 h-5" />
                   Send Message
                 </button>
-                <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-green-500/25 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                <button
+                  className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-green-500/25 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                  onClick={() => window.open("/Profile.pdf", "_blank")}
+                >
                   <Download className="w-5 h-5" />
                   Download Resume
                 </button>
