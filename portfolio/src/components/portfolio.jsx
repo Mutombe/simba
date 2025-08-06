@@ -486,10 +486,10 @@ const Portfolio = () => {
       {/* Enhanced Hero Section */}
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-center relative pt-20"
+        className="min-h-screen flex items-center justify-center relative pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8 pt-20"
         ref={heroRef}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto w-full text-center">
           <div
             className={`transform transition-all duration-1000 ${
               isVisible
@@ -497,26 +497,35 @@ const Portfolio = () => {
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="mb-8">
-              <div className="inline-block p-3 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-full backdrop-blur-sm border border-white/10 mb-6">
-                <span className="text-cyan-400 font-semibold">
+            <div className="mb-6 sm:mb-8">
+              {/* Availability Badge */}
+              <div className="inline-block p-2 sm:p-3 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-full backdrop-blur-sm border border-white/10 mb-4 sm:mb-6">
+                <span className="text-cyan-400 font-semibold text-xs sm:text-sm">
                   🚀 Available for Fellowship Opportunities
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Simbarashe Mutombe
+              {/* Name - Perfectly Responsive */}
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight px-2">
+                <span className="block sm:inline">Simbarashe</span>
+                <span className="block sm:inline sm:ml-4">Mutombe</span>
               </h1>
 
-              <div className="text-2xl md:text-3xl text-white/90 mb-4 h-12 flex items-center justify-center">
-                <span className="mr-2">I'm a</span>
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-bold min-w-[300px] text-left">
-                  {typedText}
-                  <span className="animate-pulse">|</span>
-                </span>
+              {/* Typed Text - Mobile Optimized */}
+              <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl text-white/90 mb-4 sm:mb-6 px-2">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+                  <span className="text-center">I'm a</span>
+                  <div className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-bold min-h-[1.5em] flex items-center justify-center">
+                    <span className="text-center min-w-[200px] xs:min-w-[250px] sm:min-w-[300px]">
+                      {typedText}
+                      <span className="animate-pulse">|</span>
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              <p className="text-lg md:text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
+              {/* Description */}
+              <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
                 Passionate software engineer with{" "}
                 <span className="text-cyan-400 font-semibold">
                   5+ successful projects
@@ -528,7 +537,8 @@ const Portfolio = () => {
                 and ready to bring innovation to New York's tech ecosystem.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {/* Tags - Mobile Responsive */}
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-4">
                 {[
                   "Full-Stack",
                   "React Expert",
@@ -538,7 +548,7 @@ const Portfolio = () => {
                 ].map((tag, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 rounded-full backdrop-blur-sm border border-white/20 text-sm font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                    className="px-3 py-2 sm:px-4 sm:py-2 bg-gradient-to-r from-white/10 to-white/5 rounded-full backdrop-blur-sm border border-white/20 text-xs sm:text-sm font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {tag}
@@ -547,46 +557,48 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            {/* Action Buttons - Mobile Stacked */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
               <button
                 onClick={() => scrollToSection("projects")}
-                className="group px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105 flex items-center gap-2 relative overflow-hidden"
+                className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105 flex items-center justify-center gap-2 relative overflow-hidden text-sm sm:text-base"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative">View My Work</span>
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative" />
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform relative" />
               </button>
 
               <button
                 onClick={() => scrollToSection("contact")}
-                className="px-8 py-4 border-2 border-white/20 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:border-white/40 backdrop-blur-sm hover:scale-105"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/20 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:border-white/40 backdrop-blur-sm hover:scale-105 text-sm sm:text-base"
               >
                 Get In Touch
               </button>
 
               <button
-                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/25 hover:scale-105 flex items-center gap-2"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/25 hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
                 onClick={() => window.open("/Profile.pdf", "_blank")}
               >
-                <Download className="w-5 h-5" />
+                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                 Resume
               </button>
             </div>
 
-            <div className="flex justify-center space-x-6">
+            {/* Social Links - Mobile Optimized */}
+            <div className="flex justify-center space-x-4 sm:space-x-6">
               {[
                 {
-                  icon: <Github className="w-6 h-6" />,
+                  icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />,
                   href: "https://github.com/mutombe",
                   color: "from-gray-600 to-gray-800",
                 },
                 {
-                  icon: <Linkedin className="w-6 h-6" />,
+                  icon: <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />,
                   href: "#",
                   color: "from-blue-600 to-blue-800",
                 },
                 {
-                  icon: <Mail className="w-6 h-6" />,
+                  icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
                   href: "mailto:simbarashemutombe1@gmail.com",
                   color: "from-red-600 to-red-800",
                 },
@@ -594,7 +606,7 @@ const Portfolio = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className={`p-4 bg-white/10 rounded-full hover:bg-gradient-to-r hover:${social.color} transition-all duration-300 hover:scale-110 backdrop-blur-sm group`}
+                  className={`p-3 sm:p-4 bg-white/10 rounded-full hover:bg-gradient-to-r hover:${social.color} transition-all duration-300 hover:scale-110 backdrop-blur-sm group`}
                 >
                   <div className="group-hover:scale-110 transition-transform">
                     {social.icon}
@@ -605,8 +617,9 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-white/60" />
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 text-white/60" />
         </div>
       </section>
 
